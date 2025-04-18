@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentilyzer - Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Background Image and Overlay -->
+    <div class="relative min-h-screen bg-cover bg-center" style="background-image: url('https://images.hdqwalls.com/wallpapers/thumb/blur-blue-light-gradient-illustration-f3.jpg');">
+        <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Dark Overlay -->
+        
+        <div class="relative z-10 flex items-center justify-center min-h-screen">
+            <!-- Result Container -->
+            <div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-lg text-center space-y-6">
+                <h1 class="text-4xl font-semibold text-indigo-600">Sentiment Analysis Result</h1>
+                <p class="text-lg text-gray-700 mb-4">Here's the sentiment of your review:</p>
+
+                <!-- Displaying the Review Text -->
+                <p class="text-lg font-medium text-gray-800"><strong>Input Review:</strong></p>
+                <p class="text-gray-600 italic mb-4">{{ original_text }}</p>
+
+                <!-- Displaying the Sentiment -->
+                <p class="text-lg font-medium">
+                    <strong>Predicted Sentiment:</strong>
+                    <span class="font-semibold" style="color: {{ sentiment_color }}">{{ sentiment }}</span>
+                </p>
+
+                <!-- Button to Analyze Another Review -->
+                <a href="/" class="inline-block mt-6 px-6 py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    ← Analyze Another
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
